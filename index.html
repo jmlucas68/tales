@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tales de Mileto: El Primer Filósofo</title>
+    <style>
+        /* --- Importación de Fuentes --- */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
+
+        /* --- Variables de Color (Paleta inspirada en la Grecia Clásica) --- */
+        :root {
+            --color-fondo: #f4f1ea; /* Papiro/Mármol claro */
+            --color-texto: #3a3a3a; /* Carbón */
+            --color-primario: #34568B; /* Azul Egeo profundo */
+            --color-acento: #c88f4b; /* Bronce/Oro viejo */
+            --color-fondo-cita: #e9e6df;
+        }
+
+        /* --- Estilos Generales --- */
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            font-size: 18px;
+        }
+
+        /* --- Contenedor Principal --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Cabecera --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 3px solid var(--color-primario);
+            margin-bottom: 40px;
+            background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Miletus_Theater_2.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+            header h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 3.5em;
+                margin: 0;
+                color: white;
+            }
+
+            header .subtitle {
+                font-size: 1.4em;
+                font-style: italic;
+                margin-top: 10px;
+            }
+
+        /* --- Secciones --- */
+        section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            color: var(--color-primario);
+            border-bottom: 2px solid var(--color-acento);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* --- Diseño Visual de la Introducción --- */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+            .intro-grid img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                border: 5px solid var(--color-fondo-cita);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+        /* --- Citas --- */
+        blockquote {
+            background-color: var(--color-fondo-cita);
+            border-left: 5px solid var(--color-primario);
+            margin: 20px 0;
+            padding: 20px 30px;
+            font-size: 1.2em;
+            font-style: italic;
+            position: relative;
+        }
+
+            blockquote::before {
+                content: '“';
+                font-family: 'Lora', serif;
+                font-size: 4em;
+                color: var(--color-primario);
+                opacity: 0.2;
+                position: absolute;
+                top: -10px;
+                left: 5px;
+            }
+
+        cite {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--color-texto);
+        }
+
+        /* --- Enlaces y Listas --- */
+        a {
+            color: var(--color-primario);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 1px dotted var(--color-primario);
+        }
+
+            a:hover {
+                color: var(--color-acento);
+                border-bottom: 1px solid var(--color-acento);
+            }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+            ul li {
+                padding: 10px 0 10px 30px;
+                position: relative;
+                border-bottom: 1px solid #eee;
+            }
+
+                ul li::before {
+                    content: '➤';
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    color: var(--color-acento);
+                }
+
+        /* --- Pie de Página --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* --- Diseño Responsivo --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header .subtitle {
+                font-size: 1.1em;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+                .intro-grid img {
+                    max-width: 200px;
+                    margin: 0 auto 20px;
+                }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Tales de Mileto</h1>
+            <p class="subtitle">El amanecer del pensamiento racional</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="biografia">
+            <h2>¿Quién fue Tales de Mileto?</h2>
+            <div class="intro-grid">
+                <img src="https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Tales.jpg" alt="Busto de Tales de Mileto">
+                <div>
+                    <p><strong>Tales de Mileto</strong> (c. 624 a.C. – c. 546 a.C.) es universalmente reconocido como el <strong>primer filósofo de la tradición occidental</strong>. Nacido en la próspera ciudad jonia de Mileto, en la costa de la actual Turquía, Tales marcó un punto de inflexión en la historia del pensamiento humano al ser el primero en buscar explicaciones racionales (<em>logos</em>) a los fenómenos naturales, en lugar de recurrir a los mitos (<em>mythos</em>) y a la intervención divina.</p>
+                    <p>Fue un hombre polifacético: matemático, astrónomo, estadista y físico. Su curiosidad insaciable y su método de observación y deducción sentaron las bases de la ciencia y la filosofía que florecerían durante siglos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contexto">
+            <h2>Contexto Histórico y Filosófico</h2>
+            <p>Tales vivió en el siglo VI a.C. en Mileto, un vibrante puerto comercial que conectaba Grecia con Egipto, Mesopotamia y otras grandes civilizaciones. Este crisol de culturas facilitó el intercambio no solo de mercancías, sino también de ideas, conocimientos matemáticos y astronómicos. Fue en este ambiente de apertura intelectual donde Tales y sus sucesores (la Escuela de Mileto) pudieron distanciarse de las explicaciones mitológicas tradicionales, personificadas en los poemas de Homero y Hesíodo, para inaugurar una nueva era de investigación basada en la razón y la observación del mundo natural.</p>
+        </section>
+
+        <section id="pensamiento">
+            <h2>El Pensamiento de Tales: El Agua como <em>Arché</em></h2>
+            <p>La contribución más célebre de Tales a la filosofía es su postulado de que un único principio fundamental o sustancia originaria (<strong><em>arché</em></strong>) constituye la realidad en su totalidad. Para Tales, este principio era el <strong>agua</strong>.</p>
+            <p>Aristóteles nos explica que Tales pudo haber llegado a esta conclusión observando que el alimento de todas las cosas es húmedo, que el calor mismo se genera de la humedad y que las semillas de todo tienen una naturaleza húmeda. El agua es esencial para la vida, se transforma en vapor (aire) y hielo (sólido), y parece estar presente en todas partes.</p>
+
+            <blockquote>
+                La tierra flota sobre el agua, siendo esta el principio de todas las cosas.
+                <cite>— Atribuido a Tales por Aristóteles en "Metafísica".</cite>
+            </blockquote>
+
+            <p>Esta idea, aunque hoy nos parezca simple, es revolucionaria por tres motivos:</p>
+            <ol>
+                <li><strong>Monismo:</strong> Propone que la diversidad del universo proviene de una única sustancia.</li>
+                <li><strong>Materialismo:</strong> El principio es un elemento físico y observable (agua), no un dios.</li>
+                <li><strong>Hilozoísmo:</strong> Implica que la materia misma posee vida y capacidad de movimiento (de ahí la idea de que "todo está lleno de dioses", entendiendo "dioses" como fuerzas naturales inmanentes).</li>
+            </ol>
+
+            <blockquote>
+                Todas las cosas están llenas de dioses.
+                <cite>— Atribuido a Tales por Aristóteles en "Sobre el alma".</cite>
+            </blockquote>
+
+        </section>
+
+        <section id="obra-legado">
+            <h2>Obra y Legado</h2>
+            <p>Es importante señalar que <strong>no sobrevive ninguna obra escrita por Tales</strong>. Todo lo que sabemos de él nos ha llegado a través de filósofos y historiadores posteriores como Platón, Aristóteles, Heródoto y Diógenes Laercio. Sus logros se conocen por atribución:</p>
+            <ul>
+                <li><strong>Geometría:</strong> Se le atribuye la introducción de la geometría en Grecia desde Egipto y la formulación de varios teoremas, incluyendo el famoso <strong>Teorema de Tales</strong>. Se dice que lo usó para calcular la altura de las pirámides de Egipto midiendo sus sombras.</li>
+                <li><strong>Astronomía:</strong> La hazaña más famosa de Tales fue predecir con éxito el <strong>eclipse solar del 28 de mayo de 585 a.C.</strong>, un evento que, según Heródoto, detuvo una batalla entre los lidios y los medos.</li>
+            </ul>
+
+            <h3>Influencias Recibidas y Ejercidas</h3>
+            <p><strong>Influencias Recibidas:</strong> Tales se nutrió del conocimiento práctico de la <strong>geometría egipcia</strong> (utilizada para medir tierras) y de la <strong>astronomía babilónica</strong> (centrada en la predicción y el registro de eventos celestes).</p>
+            <p><strong>Influencias Ejercidas:</strong> Su legado es inmenso. Como "Padre de la Filosofía", inspiró directamente a sus discípulos de la Escuela de Mileto, <strong>Anaximandro</strong> y <strong>Anaxímenes</strong>, quienes continuaron su búsqueda del <em>arché</em>. Su enfoque racional sentó las bases para toda la filosofía presocrática y, en última instancia, para figuras como Platón y Aristóteles, quienes lo reconocieron como el punto de partida del pensamiento filosófico.</p>
+        </section>
+
+        <section id="fuentes-estudio">
+            <h2>Obras Clave y Fuentes de Estudio</h2>
+            <p>Como Tales no dejó escritos, para estudiarlo debemos acudir a las fuentes que hablaron de él. Aquí tienes enlaces a las obras más importantes y a recursos académicos para profundizar en su figura.</p>
+
+            <h3>Obras Clásicas que Mencionan a Tales</h3>
+            <p>Estos libros son las fuentes primarias (indirectas) sobre su pensamiento.</p>
+            <ul>
+                <li>
+                    <strong>Metafísica de Aristóteles:</strong> El Libro I (Alpha) es fundamental, ya que Aristóteles describe a Tales como el iniciador de la filosofía.
+                    <br>
+                    <a href="https://archive.org/details/metafisica_202009" target="_blank">Leer en Archive.org (versión bilingüe)</a> | <a href="https://www.amazon.es/Metaf%C3%ADsica-Arist%C3%B3teles/dp/8424939227/" target="_blank">Comprar en Amazon.es</a>
+                </li>
+                <li>
+                    <strong>Vidas de los filósofos más ilustres de Diógenes Laercio:</strong> El Libro I está dedicado a Tales y narra anécdotas sobre su vida y resume su pensamiento.
+                    <br>
+                    <a href="https://archive.org/details/vidasopinionesys01diog/page/n5/mode/2up" target="_blank">Leer en Archive.org</a> | <a href="https://www.amazon.es/Vidas-opiniones-sentencias-fil%C3%B3sofos-ilustres/dp/8420676963/" target="_blank">Comprar en Amazon.es</a>
+                </li>
+                <li>
+                    <strong>Los filósofos presocráticos (Compilación de G.S. Kirk, J.E. Raven y M. Schofield):</strong> Una obra académica esencial que recoge y comenta los fragmentos y testimonios de los presocráticos, incluido Tales.
+                    <br>
+                    <a href="https://www.amazon.es/fil%C3%B3sofos-presocr%C3%A1ticos-Historia-cr%C3%ADtica-testimonios/dp/8424935671" target="_blank">Comprar en Amazon.es</a>
+                </li>
+            </ul>
+
+            <h3>Artículos y Recursos Online</h3>
+            <ul>
+                <li>
+                    <strong>Wikipedia:</strong> Un excelente punto de partida con información bien estructurada.
+                    <br>
+                    <a href="https://es.wikipedia.org/wiki/Tales_de_Mileto" target="_blank">Artículo sobre Tales de Mileto en Wikipedia</a>
+                </li>
+                <li>
+                    <strong>Academia.edu:</strong> Plataforma con numerosos artículos académicos.
+                    <br>
+                    <a href="https://www.academia.edu/search?q=Tales%20de%20Mileto" target="_blank">Buscar "Tales de Mileto" en Academia.edu</a>
+                </li>
+                <li>
+                    <strong>Stanford Encyclopedia of Philosophy:</strong> Un análisis profundo y riguroso (en inglés).
+                    <br>
+                    <a href="https://plato.stanford.edu/entries/thales/" target="_blank">Artículo sobre Thales en la SEP</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="fuentes">
+            <h2>Fuentes de Información Utilizadas</h2>
+            <ul>
+                <li>Aristóteles. <em>Metafísica</em>.</li>
+                <li>Diógenes Laercio. <em>Vidas de los filósofos más ilustres</em>.</li>
+                <li>G. S. Kirk, J. E. Raven & M. Schofield. <em>The Presocratic Philosophers: A Critical History with a Selection of Texts</em>.</li>
+                <li>Enciclopedia Herder de Filosofía.</li>
+                <li>Wikipedia.org y Stanford Encyclopedia of Philosophy.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            Página web estática creada en 2024 para ilustrar la vida y obra de Tales de Mileto.
+        </div>
+    </footer>
+
+</body>
+</html>
