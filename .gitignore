@@ -12,3 +12,6 @@
 *.vsidx
 *.sqlite-journal
 *.config
+*.wsuo
+/.vs/tales/v17/DocumentLayout.json
+/.vs/VSWorkspaceState.json
